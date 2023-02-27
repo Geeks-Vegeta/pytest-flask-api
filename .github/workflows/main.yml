@@ -12,7 +12,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -46,6 +46,13 @@ jobs:
       uses: pavi2410/html-preview-action@v2
       with:
         html_file: 'index.html'
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.2.1
+      with:
+        ACCESS_TOKEN: ${{ secrets.gh_token }}
+        BASE_BRANCH: main
+        clean: true
 
   deploy:
     needs: build 
