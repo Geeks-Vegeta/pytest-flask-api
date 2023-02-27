@@ -41,11 +41,16 @@ jobs:
       run: |
          pytest -vs --html=index.html --self-contained-html --md-report
 
-    - name: HTML Preview 💋
-      id: html_preview
-      uses: pavi2410/html-preview-action@v2
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git commit -a -m "Add changes"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
-        html_file: 'index.html'
+        branch: ${{ github.head_ref }}
+
 
 
     # - name: Deploy to GitHub Pages
