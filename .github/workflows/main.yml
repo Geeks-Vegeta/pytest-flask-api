@@ -54,7 +54,7 @@ jobs:
         BASE_BRANCH: main
         clean: true
         BRANCH: main
-        FOLDER: 'index.html'
+        FOLDER: 'reports'
 
   deploy:
     needs: build 
