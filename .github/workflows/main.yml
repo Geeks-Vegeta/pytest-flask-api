@@ -51,16 +51,6 @@ jobs:
       with:
         branch: ${{ github.head_ref }}
 
-
-
-    # - name: Deploy to GitHub Pages
-    #   uses: JamesIves/github-pages-deploy-action@3.2.1
-    #   with:
-    #     ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
-    #     BASE_BRANCH: main
-    #     BRANCH: main
-    #     FOLDER: '/'
-
   deploy:
     needs: build 
     environment:
