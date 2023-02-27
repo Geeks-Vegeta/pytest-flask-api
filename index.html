@@ -431,7 +431,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
     for(let i = 0; i < outcomeRows.length; i++){
         outcomeRows[i].hidden = !elem.checked;
     }
-
+ 
     const rows = findAll('.results-table-row').filter(isAllRowsHidden);
     const allRowsHidden = rows.length == 0 ? true : false;
     const notFoundMessage = document.getElementById('not-found-message');
