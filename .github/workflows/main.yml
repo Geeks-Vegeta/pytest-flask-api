@@ -47,11 +47,11 @@ jobs:
       with:
         html_file: 'reports/index.html'
 
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        GITHUB_TOKEN: ${{ secrets.gh_token }}
-        folder: reports # The folder the action should deploy.
+    # - name: Deploy 🚀
+    #   uses: JamesIves/github-pages-deploy-action@v4
+    #   with:
+    #     GITHUB_TOKEN: ${{ secrets.gh_token }}
+    #     folder: reports # The folder the action should deploy.
 
   deploy:
     needs: buid 
