@@ -12,7 +12,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -53,7 +53,7 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
         BASE_BRANCH: main
         clean: true
-        BRANCH: main
+        BRANCH: gh-pages
         FOLDER: 'reports'
 
   deploy:
