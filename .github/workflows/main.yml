@@ -53,6 +53,7 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.gh_token }}
         BASE_BRANCH: main
         clean: true
+        FOLDER: 'index.html'
 
   deploy:
     needs: build 
