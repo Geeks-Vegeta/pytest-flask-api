@@ -41,18 +41,12 @@ jobs:
       run: |
          pytest -vs --html=index.html --self-contained-html --md-report
 
-    - name: HTML Preview 💋
-      id: html_preview
-      uses: pavi2410/html-preview-action@v2
-      with:
-        html_file: 'index.html'
+    # - name: HTML Preview 💋
+    #   id: html_preview
+    #   uses: pavi2410/html-preview-action@v2
+    #   with:
+    #     html_file: 'index.html'
 
-
-    - name: Building HTML
-      env:
-        NODE_ENV: production
-      working-directory: reports
-      run:  pytest -vs --html=index.html
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.2.1
