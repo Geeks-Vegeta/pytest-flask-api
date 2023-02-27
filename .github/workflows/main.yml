@@ -1,31 +1,20 @@
 
-name: Flask CI
+name: Flask CI PYTest
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
-    branches: [ main ]
+    branches: [ "main" ]
 
 
 jobs:
   build:
-    runs-on: devops
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.7]
+    runs-on: ubuntu-latest
+
 
     steps:
     - uses: actions/checkout@v2
       with:
           fetch-depth: 0
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
 
     - name: Install Dependencies
       run: |
