@@ -54,7 +54,7 @@ jobs:
     #     folder: reports # The folder the action should deploy.
 
   deploy:
-    needs: buid 
+    needs: build 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
