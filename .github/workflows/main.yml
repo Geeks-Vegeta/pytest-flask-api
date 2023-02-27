@@ -16,17 +16,22 @@ jobs:
       with:
           fetch-depth: 0
 
-    - name: Install Dependencies
+    - name: Install Dependencies 🛩️
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
-    - name: Run Tests
+    - name: Run Tests 
       run: |
-         pytest -vs --html=index.html --self-contained-html --md-report
+         pytest -vs --html=reports/index.html --self-contained-html --md-report
 
-    - name: HTML Preview
+    - name: HTML Preview 💋
       id: html_preview
       uses: pavi2410/html-preview-action@v2
       with:
-        html_file: 'index.html'
+        html_file: 'reports/index.html'
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: reports # The folder the action should deploy.
