@@ -50,9 +50,10 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.2.1
       with:
-        ACCESS_TOKEN: ${{ secrets.gh_token }}
+        ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
         BASE_BRANCH: main
         clean: true
+        BRANCH: main
         FOLDER: 'index.html'
 
   deploy:
