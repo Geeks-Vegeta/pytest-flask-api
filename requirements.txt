@@ -29,6 +29,7 @@ pytest==7.2.1
 pytest-html==3.2.0
 pytest-md-report==0.3.0
 pytest-metadata==2.0.4
+python-dotenv==1.0.0
 pytz==2022.7.1
 six==1.16.0
 SQLAlchemy==2.0.4
