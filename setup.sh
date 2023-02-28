@@ -9,6 +9,7 @@ then
   python3 -m venv venv
   source ./venv/bin/activate
   pip install -r requirements.txt
+  python3 -m flask db upgrade
   pytest -vs --html=index.html --self-contained-html --md-report
   python3 app.py
 

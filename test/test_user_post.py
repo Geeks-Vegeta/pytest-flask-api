@@ -2,7 +2,6 @@ from app import app
 import json
 
 
-
 def test_login_user():
     global token
     data={
