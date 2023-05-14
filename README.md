@@ -1,8 +1,16 @@
-# pytest-flask-api
-PyTest Flask API
+# pytest-flask-api 🚀
+PyTest Flask API 🫘
 
 ```bash
 source setup.sh
 ```
-python3 -m flask db init
+
+This command will initialize flask database
+```bash
+python3 -m flask db init 
+```
+
+This command will able to migrate to flask
+```bash
 python3 -m flask db migrate
+```
