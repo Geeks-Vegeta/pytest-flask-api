@@ -17,7 +17,7 @@ def test_login_user():
 
 def test_add_post():
     data={
-        "title": "hello bhai",
+        "title": "hello brother",
         "body": "hello"
     }
     response = app.test_client().post("/post", data=json.dumps(data),

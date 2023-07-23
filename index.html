@@ -443,12 +443,6 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
     <h2>Environment</h2>
     <table id="environment">
       <tr>
-        <td>CI</td>
-        <td>true</td></tr>
-      <tr>
-        <td>JAVA_HOME</td>
-        <td>/usr/lib/jvm/temurin-11-jdk-amd64</td></tr>
-      <tr>
         <td>Packages</td>
         <td>{"pluggy": "1.0.0", "pytest": "7.2.1"}</td></tr>
       <tr>
@@ -473,11 +467,29 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test/test_user_post.py::test_update_post</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test/test_user_post.py::test_delete_post</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test/test_home.py::test_home</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-duration">0.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
